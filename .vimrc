@@ -1,5 +1,5 @@
 " vim plug
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 " plugins
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
@@ -11,6 +11,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'elixir-editors/vim-elixir'
+Plug 'vim-scripts/closetag.vim'
+Plug 'Townk/vim-autoclose'
 call plug#end()
 
 " set file specific things on
@@ -52,8 +54,7 @@ autocmd BufEnter * call CheckLeftBuffers()
 let g:ale_linters = {
     \   'go': ['go vet',
     \          'golint'],
-    \   'typescript': ['tslint'],
-    \   'javascript': ['prettier'],
+    \   'typscript': [''],
     \   'html': ['prettier'],
     \   'scss': ['prettier'],
     \   'css': ['prettier'],
@@ -63,8 +64,6 @@ let g:ale_linters = {
     \}
 let g:ale_fixers = {
     \   'go': ['goimports'],
-    \   'typescript': ['prettier'],
-    \   'javascript': ['prettier'],
     \   'html': ['prettier'],
     \   'scss': ['prettier'],
     \   'css': ['prettier'],
