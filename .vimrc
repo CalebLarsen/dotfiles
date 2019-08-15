@@ -123,10 +123,11 @@ set ts=4 sw=4 ai
 set tabstop=4
 set expandtab
 set t_Co=256
+command! NT NERDTreeToggle
 set winminwidth=0
 let mapleader = ","
-:nnoremap <Leader>h <C-W>h
-:nnoremap <Leader>l <C-W>l
+nmap <Leader>h <C-W>h500<C-W>>
+nmap <Leader>l <C-W>l500<C-W>>
 :nnoremap <Leader>j <C-W>j
 :nnoremap <Leader>k <C-W>k
 
@@ -143,6 +144,7 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+
 
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 et
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 et
