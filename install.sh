@@ -55,6 +55,7 @@ if [ ! -f "$DEPS" ]; then
         # firacode
         # vim plugged
         # kitty
+    touch .installed
 else
     echo "Dependencies already installed."
 fi
