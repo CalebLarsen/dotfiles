@@ -1,8 +1,33 @@
 # Dotfiles
 My Dotfiles!
 
-TODO:
-- [ ] Add a good README
-- [ ] Add an update script
-- [ ] Add an install script
-- [ ] Add a list of packages to setup environment
+My setup:
+
+Terminal Emulator - Kitty
+  - Fast
+  - Supports ligatures
+  
+Shell - zsh
+  - Nice plugins + completion
+  - zinit is a crazy fast plugin manager
+  - powerlevel10k is a easy, good looking prompt
+
+Editor - vim
+  - Grows with you
+  - Vim bindings are life-changing
+
+Tools - 
+  - tmux
+    - terminal multiplexer
+  - fzf
+    - fuzzy file finding
+    - a must-have for large projects
+  - ripgrep
+    - a faster, easier grep
+  - vivid
+    - sets up my LS_COLORS :)
+  - exa
+    - ls with nicer defaults
+
+Font - Firacode
+  - Ligatures!
