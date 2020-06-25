@@ -28,6 +28,7 @@ Tools -
     - sets up my LS_COLORS :)
   - exa
     - ls with nicer defaults
+    - prettier colors
 
 Font - Firacode
   - Ligatures!
