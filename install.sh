@@ -47,7 +47,7 @@ if [ "$OS" = "$UBUNTU" ]; then
             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
     # kitty
-    command -v kitty >/dev/null 2>&1 || ( curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin && ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/ && cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications && sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop )
+    command -v kitty >/dev/null 2>&1 || ( curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin && ln -sf ~/.local/kitty.app/bin/kitty ~/.local/bin/ && cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications && sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty.desktop )
 
 fi
 # TODO Install on Arch
