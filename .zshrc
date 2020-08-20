@@ -9,9 +9,12 @@ export LANG=en_US.utf8
 export TERM="screen-256color"
 export VISUAL=vim
 export EDITOR="$VISUAL"
+bindkey -e
 
 # If using GNOME
-setxkbmap -option caps:escape
+if type setxkbmap &> /dev/null; then
+    setxkbmap -option caps:escape
+fi
 
 setopt histignorealldups sharehistory
 
@@ -60,15 +63,11 @@ alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias cdl='cd ~/lucid/main'
 alias bff='bazel format-fast'
+alias lt='lucid-start tmux'
 
 function pull-all {
     for d in ./*/ ; do (cd "$d" && echo "$d" && git pull); done
 }
-
-alias spnext="spotifycli --next"
-alias spprev="spotifycli --prev"
-alias spplay="spotifycli --playpause"
-alias splyrics="spotifycli --lyrics"
 alias zenv="source ~/.zshrc"
 alias vf="vim \$(fzf)"
 
@@ -107,6 +106,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 #bindkey '^[[A' history-substring-search-up
 #bindkey '^[[B' history-substring-search-down
+bindkey "G" autosuggest-accept
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down

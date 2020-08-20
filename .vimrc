@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug 'preservim/nerdtree'
 Plug 'fatih/molokai'
-Plug 'raimondi/delimitmate'
+"Plug 'raimondi/delimitmate'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -32,7 +32,7 @@ filetype indent on
 "
 " nerdtree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " if no files opened (ie, $ vim) then open by default autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " if no files opened (ie, $ vim) then open by default autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif "open if file is a directory
 let NERDTreeShowHidden=1
 command! NT NERDTreeToggle
