@@ -1,0 +1,114 @@
+"attribute" = { fg = "green" }
+
+"type" = "light-blue"
+"type.parameter" = { fg = "light-blue", modifiers = ["bold"] }
+"type.enum.variant" = { fg = "white" } 
+
+"constructor" = { fg = "green" }
+
+"constant" = { fg = "white" }
+"constant.builtin" = { fg = "purple" }
+"constant.numeric" = { fg = "purple" }
+"constant.character" = { fg = "yellow" }
+"constant.character.escape" = { fg = "pink" }
+
+"string" = { fg = "yellow" }
+"string.regexp" = { fg = "pink" }
+
+"comment" = "light-gray"
+"comment.block.documentation" = { fg = "light-gray", modifiers = ["bold"] }
+
+"variable" = { fg = "white" }
+"variable.builtin" = { fg = "purple", modifiers = ["bold"] }
+"variable.parameter" = "white"
+"variable.other.member" = { fg = "white" }
+
+"label" = "yellow"
+
+"punctuation" = { fg = "white" }
+"punctuation.delimiter" = "light-gray"
+
+"keyword" = { fg = "pink", modifiers = ["bold"] }
+"keyword.control" = { fg = "pink", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "green", modifiers = ["bold"] }
+"keyword.directive" = { fg = "green", modifiers = ["bold"] }
+"keyword.storage.modifier" = { fg = "orange" }
+
+"operator" = "pink"
+
+"function" = { fg = "green" }
+"function.builtin" = { fg = "green", modifiers = ["bold"] }
+"function.macro" = { fg = "green", modifiers = ["bold"] }
+
+"tag" = { fg = "purple", modifiers = ["bold"] }
+
+"namespace" = { fg = "green" }
+
+"special" = { fg = "pink" }
+
+"markup.heading" = "light-blue"
+"markup.list" = "pink"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "pink" }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "yellow", underlined.style="line" }
+"markup.link.text" = "light-blue"
+"markup.quote" = "light-blue"
+"markup.raw" = "green"
+
+"diff.plus" = "white"
+"diff.delta" = "light-gray"
+"diff.minus" = { fg = "pink", modifiers = ["dim"] }
+
+"ui.background" = { fg = "white", bg = "darkest-gray" }
+"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "black", bg = "white" }
+"ui.cursor.match" = { fg = "black", bg = "orange", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "dark-gray" }
+"ui.help" = { fg = "light-blue", bg = "black" }
+"ui.linenr" = { fg = "light-gray", modifiers = ["dim"] }
+"ui.linenr.selected" = "orange"
+"ui.menu" = { fg = "light-blue", bg = "black" }
+"ui.menu.selected" = { bg = "light-gray" }
+"ui.popup" = { fg = "light-blue", bg = "black" }
+"ui.popup.info" = { fg = "light-blue", bg = "black" }
+"ui.selection" = { bg = "dark-gray"}
+"ui.selection.primary" = { bg = "gray"}
+"ui.text" = { fg = "white" }
+"ui.text.focus" = { fg = "white" }
+"ui.text.info" = { fg = "light-blue", bg = "black" }
+"ui.statusline" = { fg = "white", bg = "dark-gray" }
+"ui.statusline.normal" = { fg = "white" }
+"ui.statusline.insert" = { fg = "light-gray" }
+"ui.statusline.select" = { fg = "gray" }
+"ui.virtual" = { fg = "white" }
+"ui.virtual.whitespace" = { fg = "dark-gray" }
+"ui.virtual.ruler" = { fg = "orange", bg = "gray" }
+"ui.virtual.indent-guide" = { bg = "dark-gray" }
+"ui.window" = { fg = "white", bg = "darkest-gray" }
+
+"warning" = { fg = "white", modifiers = ["bold"] }
+"error" = { fg = "white", modifiers = ["bold"] }
+"info" = { fg = "white", modifiers = ["bold"] }
+"hint" = { fg = "white", modifiers = ["bold"] }
+
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "pink", style = "curl" } }
+"diagnostic.info" = { underline = { color = "light-gray", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "light-gray", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+[palette]
+white        = "#ffffff"
+light-gray   = "#7e8e91"
+gray         = "#444444"
+dark-gray    = "#333333"
+darkest-gray = "#1b1d1e"
+black        = "#000000"
+pink         = "#f92672"
+orange       = "#fd971f"
+yellow       = "#e6db74"
+green        = "#a6e22e"
+light-blue   = "#66d9ef"
+purple       = "#ae81ff"
