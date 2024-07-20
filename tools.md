@@ -13,3 +13,4 @@ duf
 diff-so-fancy
 unar
 glow
+yank

@@ -55,7 +55,7 @@ alias senv='source ~/.bashrc'
 alias cat='bat'
 alias nnn='nnn -e'
 alias du='dust'
-alias diff='diff-so-fancy'
+alias yank='yank-cli -- xsel -b'
 
 ###
 ### Functions
