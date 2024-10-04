@@ -26,9 +26,6 @@ if [ -d "$HOME/.cargo" ] ; then
   . "$HOME/.cargo/env"
 fi
 
-# Nix
-if [ -e /home/caleb/.nix-profile/etc/profile.d/nix.sh ]; then . /home/caleb/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 ### Enviroment Variables
 
 export EDITOR=hx
@@ -66,8 +63,8 @@ alias yank='yank-cli -- xsel -b'
 
 ###
 ### Misc
-
-setxkbmap -option caps:escape
+  
+pidof X && setxkbmap -option caps:escape
 # Prompt
 PS1='\[\033[01]\]\[\033[38;2;249;38;114m\]c\[\033[38;2;253;151;31m\]a\[\033[38;2;230;219;116m\]l\[\033[38;2;166;226;46m\]e\[\033[38;2;102;217;239m\]b\[\033[38;2;174;129;255m\]:\[\033[38;2;166;226;46m\]\w\[\033[00m\]> '
 
@@ -75,7 +72,5 @@ PS1='\[\033[01]\]\[\033[38;2;249;38;114m\]c\[\033[38;2;253;151;31m\]a\[\033[38;2
 ### Change Bash Env
 # zoxide
 eval "$(zoxide init bash)"
-# direnv
-eval "$(direnv hook bash)"
 
 ###
