@@ -25,6 +25,18 @@ if ! type hx &> /dev/null; then
 	~/bin/eget helix-editor/helix --to ~/bin
 	~/bin/hx --grammar fetch
 	~/bin/hx --grammar build
+	# Install queries so that highlighting actually works. Doesn't work out of the box, closed issue apparently (https://github.com/helix-editor/helix/discussions/11379)
+	mkdir -p ~/.config/helix/runtime/queries
+	RUNTIME=~/.config/helix/runtime
+	GRAMMARS=$(find ~/.config/helix/runtime/grammars/sources -maxdepth 1)
+	for GRAMMAR_FULL in $GRAMMARS; do
+		GRAMMAR=$(basename $GRAMMAR_FULL)
+		if [ -d "$RUNTIME/grammars/sources/$GRAMMAR/queries" ]; then
+			mkdir -p "$RUNTIME/queries/$GRAMMAR"
+			QUERIES=$(find "$RUNTIME/grammars/sources/$GRAMMAR/queries/" -name "*.scm")
+			cp $QUERIES "$RUNTIME/queries/$GRAMMAR/"
+		fi
+	done
 fi
 # fzf
 if ! type fzf &> /dev/null; then
@@ -48,3 +60,37 @@ if ! type eza &> /dev/null; then
 fi
 # FiraCode
 ### TODO ###
+# px
+if ! type px &> /dev/null; then
+	~/bin/eget walles/px --to ~/bin
+fi
+# up
+### TODO ###
+# dust
+if ! type dust &> /dev/null; then
+	~/bin/eget bootandy/dust --to ~/bin
+fi
+# duf
+if ! type duf &> /dev/null; then
+	~/bin/eget muesli/duf --to ~/bin
+fi
+# diff-so-fancy
+if ! type diff-so-fancy &> /dev/null; then
+	~/bin/eget so-fancy/diff-so-fancy --to ~/bin
+fi
+# unar
+if ! type unar &> /dev/null; then
+	sudo apt install unar -y
+fi
+# glow
+if ! type glow &> /dev/null; then
+	~/bin/eget charmbracelet/glow --to ~/bin
+fi
+# yank
+if ! type yank &> /dev/null; then
+	~/bin/eget mptre/yank --to ~/bin
+fi
+# fd
+if ! type fd &> /dev/null; then
+	~/bin/eget sharkdp/fd --to ~/bin
+fi

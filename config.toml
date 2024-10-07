@@ -1,0 +1,7 @@
+theme = "molokai"
+
+[keys.normal]
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]
