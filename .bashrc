@@ -25,12 +25,21 @@ if [ -d "$HOME/.cargo" ] ; then
   # shellcheck disable=SC1090
   . "$HOME/.cargo/env"
 fi
-
+# Go
+if [ -d "/usr/local/go/bin" ] ; then
+  PATH=${PATH}:/usr/local/go/bin
+fi
+# Haskell
+if [ -d "$HOME/.cabal" ]; then
+ [ -f "/home/caleb/.ghcup/env" ] && . "/home/caleb/.ghcup/env" # ghcup-env
+ PATH="${PATH}:$HOME/.cabal/bin:$HOME/.ghcup/bin"
+fi
 ### Enviroment Variables
 
 export EDITOR=hx
 export SITE_ROOT=${HOME}/projects/trade
 export PAGER=bat
+export MANROFFOPT='-c'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # History
 export HISTFILE=${HOME}/.history_bash
@@ -84,3 +93,4 @@ PS1='\[\033[01]\]\[\033[38;2;249;38;114m\]c\[\033[38;2;253;151;31m\]a\[\033[38;2
 eval "$(zoxide init bash)"
 
 ###
+

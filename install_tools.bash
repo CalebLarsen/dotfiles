@@ -22,21 +22,21 @@ if ! type setxkbmap &> /dev/null; then
 fi
 # Helix
 if ! type hx &> /dev/null; then 
-	~/bin/eget helix-editor/helix --to ~/bin
-	~/bin/hx --grammar fetch
-	~/bin/hx --grammar build
-	# Install queries so that highlighting actually works. Doesn't work out of the box, closed issue apparently (https://github.com/helix-editor/helix/discussions/11379)
-	mkdir -p ~/.config/helix/runtime/queries
-	RUNTIME=~/.config/helix/runtime
-	GRAMMARS=$(find ~/.config/helix/runtime/grammars/sources -maxdepth 1)
-	for GRAMMAR_FULL in $GRAMMARS; do
-		GRAMMAR=$(basename $GRAMMAR_FULL)
-		if [ -d "$RUNTIME/grammars/sources/$GRAMMAR/queries" ]; then
-			mkdir -p "$RUNTIME/queries/$GRAMMAR"
-			QUERIES=$(find "$RUNTIME/grammars/sources/$GRAMMAR/queries/" -name "*.scm")
-			cp $QUERIES "$RUNTIME/queries/$GRAMMAR/"
-		fi
-	done
+	sudo add-apt-repository ppa:maveonair/helix-editor
+	sudo apt update
+	sudo apt install helix -y
+	# # Install queries so that highlighting actually works. Doesn't work out of the box, closed issue apparently (https://github.com/helix-editor/helix/discussions/11379)
+	# mkdir -p ~/.config/helix/runtime/queries
+	# RUNTIME=~/.config/helix/runtime
+	# GRAMMARS=$(find ~/.config/helix/runtime/grammars/sources -maxdepth 1)
+	# for GRAMMAR_FULL in $GRAMMARS; do
+	# 	GRAMMAR=$(basename $GRAMMAR_FULL)
+	# 	if [ -d "$RUNTIME/grammars/sources/$GRAMMAR/queries" ]; then
+	# 		mkdir -p "$RUNTIME/queries/$GRAMMAR"
+	# 		QUERIES=$(find "$RUNTIME/grammars/sources/$GRAMMAR/queries/" -name "*.scm")
+	# 		cp $QUERIES "$RUNTIME/queries/$GRAMMAR/"
+	# 	fi
+	# done
 fi
 # fzf
 if ! type fzf &> /dev/null; then
@@ -87,10 +87,14 @@ if ! type glow &> /dev/null; then
 	~/bin/eget charmbracelet/glow --to ~/bin
 fi
 # yank
-if ! type yank &> /dev/null; then
-	~/bin/eget mptre/yank --to ~/bin
+if ! type yank-cli &> /dev/null; then
+	sudo apt install yank -y
 fi
 # fd
 if ! type fd &> /dev/null; then
 	~/bin/eget sharkdp/fd --to ~/bin
+fi
+# npm (dependency for other things)
+if ! type node &> /dev/null; then
+	sudo apt install nodejs -y
 fi
