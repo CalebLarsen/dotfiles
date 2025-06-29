@@ -16,7 +16,6 @@
 [help]
 	autocorrect = 10
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RF
 	editor = hx
 [diff]
 	algorithm = histogram
@@ -31,7 +30,7 @@
 [branch]
 	sort = -committerdate
 [interactive]
-	diffFilter = diff-so-fancy --patch
+	diffFilter = delta --color-only
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -47,3 +46,8 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[delta]
+	navigate = true
+	line-numbers = true
+	syntax-theme = OneHalfDark
+	side-by-side = true

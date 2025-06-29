@@ -1,0 +1,129 @@
+command_timeout = 500
+
+add_newline = false
+
+palette = 'molokai'
+format = """
+[](pink)\
+$directory\
+[](fg:pink bg:green)\
+$git_branch\
+$git_status\
+[](fg:green bg:dark-gray)\
+$c$crystal$golang$haskell$java${custom.javascript}$lua$python$ruby$rust${custom.scheme}$zig\
+[](fg:dark-gray bg:black)\
+$status \
+"""
+
+[directory]
+style = "bg:pink fg:darkest-gray"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bg:green fg:dark-gray"
+format = '[ $symbol$branch]($style)'
+
+[git_status]
+style = "bg:green fg:dark-gray"
+format = '[( $all_status$ahead_behind )]($style)'
+
+[status]
+disabled = false
+style = "bold bg:black fg:red"
+format = '[$symbol]($style)'
+
+# Languages
+[c]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[crystal]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[golang]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[haskell]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[java]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[custom.javascript]
+detect_extensions = ['js']
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[lua]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[package]
+disabled = true
+
+[python]
+format = '[ $symbol$pyenv_prefix(\($virtualenv\)) ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[ruby]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[rust]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[custom.scheme]
+detect_extensions = ['scm']
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[zig]
+format = '[ $symbol ]($style)'
+symbol = ' '
+style = "bg:dark-gray fg:light-gray"
+
+[time]
+disabled = false
+use_12hr = true
+
+[palettes.molokai]
+white        = "#ffffff"
+light-gray   = "#7e8e91"
+gray         = "#444444"
+dark-gray    = "#333333"
+darkest-gray = "#1b1d1e"
+black        = "#000000"
+pink         = "#f92672"
+orange       = "#fd971f"
+yellow       = "#e6db74"
+green        = "#a6e22e"
+light-blue   = "#66d9ef"
+purple       = "#ae81ff"
+
+[palettes.factory]
+white        = "#ffffff"
+gray         = "#444444"
+dark-gray    = "#333333"
+darkest-gray = "#1b1d1e"
+red          = "#f22b10"
+yellow       = "#f29b10"
+blue         = "#2b10f2"
+cyan         = "#10d7f2"

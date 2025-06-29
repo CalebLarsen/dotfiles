@@ -1,7 +1,24 @@
-theme = "molokai"
+theme = "florumbra"
 
 [keys.normal]
 X = ["extend_line_up", "extend_to_line_bounds"]
+";" = "flip_selections"
 
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
+
+[editor]
+mouse = false
+completion-replace = true
+color-modes = true
+popup-border = "all"
+
+[editor.statusline]
+right = ["diagnostics", "register", "position", "separator", "total-line-numbers"]
+
+[editor.lsp]
+goto-reference-include-declaration = false
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"

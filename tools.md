@@ -1,3 +1,4 @@
+kitty
 helix (https://github.com/helix-editor/helix)
 fzf (https://github.com/junegunn/fzf)
 zoxide (https://github.com/ajeetdsouza/zoxide)
@@ -15,3 +16,4 @@ glow (https://github.com/charmbracelet/glow)
 yank (https://github.com/mptre/yank)
 eget (https://github.com/zyedidia/eget)
 fd (https://github.com/sharkdp/fd)
+starship

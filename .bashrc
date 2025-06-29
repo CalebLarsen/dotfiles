@@ -10,6 +10,11 @@ shopt -s progcomp_alias
 ###
 ###PATH
 
+PATH=${PATH}:${HOME}/.local/bin
+
+if [ -d "/usr/local/bin" ] ; then
+  PATH=${PATH}:/usr/local/bin
+fi
 if [ -d "$HOME/bin" ] ; then
   PATH=${PATH}:${HOME}/bin
 fi
@@ -30,10 +35,20 @@ if [ -d "/usr/local/go/bin" ] ; then
   PATH=${PATH}:/usr/local/go/bin
 fi
 # Haskell
-if [ -d "$HOME/.cabal" ]; then
+if [ -d "$HOME/.ghcup" ]; then
  [ -f "/home/caleb/.ghcup/env" ] && . "/home/caleb/.ghcup/env" # ghcup-env
  PATH="${PATH}:$HOME/.cabal/bin:$HOME/.ghcup/bin"
 fi
+# Brew
+if [ -d /opt/homebrew ]; then
+  PATH="/opt/homebrew/bin:${PATH}"
+  export HOMEBREW_NO_ENV_HINTS=1
+fi
+# Findutils
+if [ -d /opt/homebrew/opt/findutils/libexec/gnubin/ ]; then
+  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
+fi
+
 ### Enviroment Variables
 
 export EDITOR=hx
@@ -63,7 +78,7 @@ alias senv='source ~/.bashrc'
 alias cat='bat'
 alias nnn='nnn -e'
 alias du='dust'
-alias yank='yank-cli -- xsel -b'
+alias find='gfind'
 
 ###
 ### Functions
@@ -82,8 +97,10 @@ function tm() {
 
 ###
 ### Misc
-  
-pidof X && setxkbmap -option caps:escape
+
+if [ "$(uname)" = "Linux" ]; then  
+  pidof X && setxkbmap -option caps:escape
+fi
 # Prompt
 PS1='\[\033[01]\]\[\033[38;2;249;38;114m\]c\[\033[38;2;253;151;31m\]a\[\033[38;2;230;219;116m\]l\[\033[38;2;166;226;46m\]e\[\033[38;2;102;217;239m\]b\[\033[38;2;174;129;255m\]:\[\033[38;2;166;226;46m\]\w\[\033[00m\]> '
 
@@ -91,6 +108,11 @@ PS1='\[\033[01]\]\[\033[38;2;249;38;114m\]c\[\033[38;2;253;151;31m\]a\[\033[38;2
 ### Change Bash Env
 # zoxide
 eval "$(zoxide init bash)"
-
+# Chapel
+# . /opt/homebrew/Cellar/chapel/2.3.0/libexec/util/setchplenv.bash
+# Direnv
+eval "$(direnv hook bash)"
 ###
 
+
+. "$HOME/.local/share/../bin/env"

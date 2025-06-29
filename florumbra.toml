@@ -1,0 +1,128 @@
+"attribute" = { fg = "green" }
+
+"type"              = "light-blue"
+"type.enum.variant" = { fg = "light-blue" } 
+"type.parameter"    = { fg = "light-blue", modifiers = ["bold"] }
+
+"constructor" = { fg = "green", modifiers = ["bold"] }
+
+"constant"                  = { fg = "purple" }
+"constant.builtin"          = { fg = "purple", modifiers = ["bold"] }
+"constant.character"        = { fg = "yellow" }
+"constant.character.escape" = { fg = "pink" }
+"constant.numeric"          = { fg = "purple", modifiers = ["bold"] }
+
+"string"              = { fg = "yellow" }
+"string.regexp"       = { fg = "pink" }
+"string.special.path" = { fg = "light-blue", "underline" = { style = "line" } }
+"string.special.url"  = { fg = "light-blue", underline = { style = "line" } }
+
+"comment"                     = "light-gray"
+"comment.block.documentation" = { fg = "light-gray", modifiers = ["bold"] }
+"comment.line.documentation"  = { fg = "light-gray", modifiers = ["bold"] }
+
+"variable"              = { fg = "soft-white" }
+"variable.builtin"      = { fg = "purple", modifiers = ["bold"] }
+"variable.other.member" = { fg = "light-orange" }
+"variable.parameter"    = { fg = "light-orange" }
+
+"label" = "yellow"
+
+"punctuation"           = { fg = "light-gray", modifiers = ["bold"] }
+"punctuation.delimiter" = "light-gray"
+
+"keyword"                   = { fg = "pink", modifiers = ["bold"] }
+"keyword.control"           = { fg = "pink", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "green", modifiers = ["bold"] }
+"keyword.directive"         = { fg = "green", modifiers = ["bold"] }
+"keyword.storage.modifier"  = { fg = "orange" }
+
+"operator" = "pink"
+
+"function"         = { fg = "green" }
+"function.builtin" = { fg = "green", modifiers = ["bold"] }
+"function.macro"   = { fg = "green", modifiers = ["bold"] }
+
+"tag" = { fg = "purple", modifiers = ["bold"] }
+
+"namespace" = { fg = "teal" }
+
+"special" = { fg = "green" }
+
+"markup.bold"           = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading"        = { fg = "cool-gray" } # fallback for 4–6
+"markup.heading.1"      = { fg = "teal" }
+"markup.heading.2"      = { fg = "light-blue" }
+"markup.heading.3"      = { fg = "green" }
+"markup.heading.marker" = { fg = "light-green", modifiers = ["bold"] }
+"markup.italic"         = { fg = "pink" }
+"markup.link.text"      = "light-blue"
+"markup.link.url"       = { fg = "yellow", underline = { style = "line"} }
+"markup.list"           = "pink"
+"markup.quote"          = "teal"
+"markup.raw"            = "green"
+"markup.strikethrough"  = { modifiers = ["crossed_out"] }
+
+"diff.plus"  = "light-green"
+"diff.delta" = "light-blue"
+"diff.minus" = { fg = "pink", modifiers = ["dim"] }
+
+"ui.background"         = { fg = "teal", bg = "darkest-gray" }
+"ui.cursor"             = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.match"       = { fg = "darkest-gray", bg = "orange", modifiers = ["bold"] }
+"ui.cursor.primary"     = { fg = "darkest-gray", bg = "white" }
+"ui.cursorline.primary" = { bg = "dark-gray" }
+"ui.help"               = { fg = "teal", bg = "darker-gray" }
+"ui.linenr"             = { fg = "light-gray", modifiers = ["dim"] }
+"ui.linenr.selected"    = "orange"
+"ui.menu"               = { fg = "teal", bg = "darker-gray" }
+"ui.menu.selected"      = { fg = "pink", bg = "dark-gray" }
+"ui.picker.header"      = { fg = "green", modifiers = ["bold"] }
+"ui.popup"              = { fg = "teal", bg = "darker-gray" }
+"ui.popup.info"         = { fg = "teal", bg = "darker-gray" }
+"ui.selection"          = { bg = "dark-gray"}
+"ui.selection.primary"  = { bg = "gray"}
+"ui.statusline"         = { fg = "soft-white", bg = "dark-gray" }
+"ui.text"               = { fg = "teal" }
+"ui.text.directory"     = { fg = "light-green", modifiers = ["bold"] }
+"ui.text.focus"         = { fg = "pink" }
+"ui.text.info"          = { fg = "teal", bg = "darker-gray" }
+"ui.window"             = { fg = "teal", bg = "darkest-gray" }
+
+"error"   = { fg = "pink" }
+"warning" = { fg = "orange" }
+"info"    = { fg = "cool-gray" }
+"hint"    = { fg = "light-gray" }
+
+"diagnostic.error"       = { underline = { color = "pink", style = "curl" } }
+"diagnostic.warning"     = { underline = { color = "orange", style = "curl" } }
+"diagnostic.info"        = { underline = { color = "cool-gray", style = "curl" } }
+"diagnostic.hint"        = { underline = { color = "light-gray", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated"  = { modifiers = ["crossed_out"] }
+
+[palette]
+# Neutrals
+## Text
+white        = "#ffffff"
+soft-white   = "#e0e2e4"
+light-gray   = "#7e8e91"
+
+cool-gray    = "#6b8ca5"
+gray         = "#444444"
+dark-gray    = "#333333"
+darker-gray  = "#222222"
+darkest-gray = "#1b1d1e"
+
+# Accent
+pink         = "#f92672"
+green        = "#a6e22e"
+light-blue   = "#66d9ef"
+teal         = "#3fe3b5"
+
+# Secondary
+light-orange = "#e8b97a"
+orange       = "#fd971f"
+yellow       = "#e6db74"
+purple       = "#ae81ff"
+light-green  = "#b6e87e"
