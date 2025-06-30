@@ -1,7 +1,7 @@
-font_family 		  Fira Code
-bold_font 			  auto
-italic_font 		  auto
-bold_italic_font 	auto
+font_family      Fira Code
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 
 disable_ligatures cursor
 
@@ -9,12 +9,16 @@ font_features FiraCode-Regular  +ss02 +ss03 +ss04 +ss05 +zero +cv16 +cv30
 font_features FiraCode-Semibold +ss02 +ss03 +ss04 +ss05 +zero +cv16 +cv30
 font_size 18.0
 
+initial_window_width 2553
+initial_window_height 1537
+modify_font cell_height 120%
+
+cursor_shape beam
 enable_audio_bell no
 allow_remote_control yes
 
-shell /opt/homebrew/bin/fish
+shell ${fish_path}
 
-macos_hide_titlebar no
 macos_option_as_alt left
 
 map alt+h previous_tab
