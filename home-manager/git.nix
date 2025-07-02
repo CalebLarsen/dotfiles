@@ -15,7 +15,10 @@
       commit.verbose = true;
       rerere.enabled = true;
       help.autocorrect = 10;
-      core.editor = "hx";
+      core = {
+        editor = "hx";
+        attributesfile = "~/.gitattributes";
+      };
       diff.algorithm = "histogram";
       transfer.fsckObjects = true;
       fetch.fsckObjects = true;
@@ -33,6 +36,13 @@
       "url \"git@github.com:\"" = {
         insteadOf = "https://github.com/";
       };
+      "merge \"mergiraf\"" = {
+        name = "mergiraf";
+        driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
+      };
     };
   };
+  home.file.".gitattributes".text = ''
+    * merge=mergiraf
+  '';
 }

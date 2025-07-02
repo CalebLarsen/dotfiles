@@ -5,9 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nur, ... }:
     let
       system = "aarch64-darwin";
       pkgs = import nixpkgs { inherit system; };
@@ -17,7 +18,9 @@
         lib = pkgs.lib;
         modules = [
           ./home-manager/home.nix
-
+          {
+            nixpkgs.overlays = [ nur.overlays.default ];
+          }
           # Extra module to create symlinks
           {
             home.file.".config/home-manager/home.nix".source = ./home-manager/home.nix;
